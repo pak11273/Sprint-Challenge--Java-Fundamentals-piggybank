@@ -17,54 +17,63 @@ public class Coin
     private int quantity;
 
     public Coin() {
-        // default constructor required for JPA
     }
 
-    public Coin(String fname, String lname, double salary) {
-        this.fname = fname;
-        this.lname = lname;
-        this.salary = salary;
+    public Coin(long coinid, String name, String nameplural, double value, int quantity) {
+        this.name = name;
+        this.nameplural = nameplural;
+        this.value = value;
+        this.quantity = quantity;
     }
 
-    public long getEmpid() {
-        return empid;
+    public long getCoinid() {
+        return coinid;
     }
 
-    public void setEmpid(long empid) {
-        this.empid = empid;
+    public void setCoinid(long coinid) {
+        this.coinid = coinid;
     }
 
-    public String getFname() {
-        return fname;
+    public String getName() {
+        return name;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLname() {
-        return lname;
+    public String getNameplural() {
+        return nameplural;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setNameplural(String nameplural) {
+        this.nameplural = nameplural;
     }
 
-    public double getSalary() {
-        return salary;
+    public double getValue() {
+        return value;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setValue(double value) {
+        this.value = value;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override
     public String toString() {
         return "Coin{" +
                 "coinid=" + coinid +
-                ", fname='" + fname + '\'' +
-                ", lname='" + lname + '\'' +
-                ", salary=" + salary +
+                ", name='" + name + '\'' +
+                ", nameplural='" + nameplural + '\'' +
+                ", value=" + value +
+                ", quantity=" + quantity +
                 '}';
     }
 }
