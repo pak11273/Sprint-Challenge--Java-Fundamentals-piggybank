@@ -19,7 +19,7 @@ public class Coin
     public Coin() {
     }
 
-    public Coin(long coinid, String name, String nameplural, double value, int quantity) {
+    public Coin(String name, String nameplural, double value, int quantity) {
         this.name = name;
         this.nameplural = nameplural;
         this.value = value;
