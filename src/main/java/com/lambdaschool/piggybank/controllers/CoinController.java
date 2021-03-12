@@ -26,14 +26,19 @@ public class CoinController {
                 .forEachRemaining(myList::add);
 
         double total = 0;
+        double subtotal = 0;
         for (Coin c: myList)
         {
-            total = total + c.getValue();
+            subtotal = c.getValue() * c.getQuantity();
+            total = total + subtotal;
+            if(c.getQuantity() > 1) {
+                System.out.println(c.getQuantity() + " " + c.getNameplural());
+            } else {
+                System.out.println(c.getQuantity() + " " + c.getName());
+            }
         }
 
-        // total quarters
-
-        System.out.println("\n" + totalQuarters + "Quarters");System.out.println("\nTotal coins " + total);
+        System.out.println("The piggy bank holds" + " " + total);
         return new ResponseEntity<>(total, HttpStatus.OK);
     }
 }
